@@ -6,9 +6,9 @@ description:         Task 1 for FP ITMO course
 homepage:            https://github.com//fp-homework/tree/master/hw1#readme
 license:             MIT
 license-file:        LICENSE
-author:              Author name here
+author:              Ilya Bizyaev
 maintainer:          example@example.com
-copyright:           2019 Author name here
+copyright:           2020 Ilya Bizyaev
 
 category:            Web
 build-type:          Simple
@@ -18,7 +18,38 @@ tested-with:         GHC == 8.0.1
 
 library
   hs-source-dirs:      src
-  exposed-modules:     Lib
+  exposed-modules:     Block1.Task1, Block1.Task2, Block1.Task3
+                     , Block2.Task1, Block2.Task2
+                     , Block3.Task1, Block3.Task2
+                     , Block4.Task1, Block4.Task2, Block4.Task3
+                     , Block5.Task1, Block5.Task2
   ghc-options:         -Wall
   build-depends:       base >= 4.9 && < 5
+                     , mtl
+  default-language:    Haskell2010
+
+test-suite hw1-unit-tests
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test/unit
+  main-is:             Spec.hs
+  other-modules:       Block1Spec
+                     , Block2Spec
+                     , Block3Spec
+                     , Block4Spec
+                     , Block5Spec
+  build-depends:       base
+                     , hw1
+                     , hspec
+                     , hspec-discover
+  ghc-options:         -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
+  default-language:    Haskell2010
+
+test-suite hw1-property-tests
+  type:                exitcode-stdio-1.0
+  main-is:             Spec.hs
+  hs-source-dirs:      test/property
+  build-depends:       base
+                     , hw1
+                     , hspec
+  ghc-options:         -Wall -Werror -threaded -rtsopts -with-rtsopts=-N
   default-language:    Haskell2010

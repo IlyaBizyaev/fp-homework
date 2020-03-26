@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: ./test/unit
+      component: "hw1:test:hw1-unit-tests"
+    - path: ./test/property
+      component: "hw1:test:hw1-property-tests"
+    - path: ./src
+      component: "hw1:lib"
