@@ -1,7 +1,7 @@
 module Block4Spec where
 
-import           Test.Hspec
-import           Block4.Task1
+import Block4.Task1
+import Test.Hspec
 
 
 spec :: Spec

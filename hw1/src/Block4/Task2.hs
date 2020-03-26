@@ -19,7 +19,7 @@ instance Applicative Tree where
   Branch lf rf <*> x          = Branch (lf <*> x) (rf <*> x)
 
 instance Foldable Tree where
-  foldr f z (Leaf x) = f x z
+  foldr f z (Leaf x    ) = f x z
   foldr f z (Branch l r) = foldr f (foldr f z r) l
 
 instance Traversable Tree where

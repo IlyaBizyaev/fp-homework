@@ -1,8 +1,8 @@
 module Block2Spec where
 
-import           Test.Hspec
-import           Data.List.NonEmpty             ( fromList )
-import           Block2.Task2
+import Block2.Task2
+import Data.List.NonEmpty (fromList)
+import Test.Hspec
 
 
 spec :: Spec

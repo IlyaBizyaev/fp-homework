@@ -6,9 +6,7 @@ module Block2.Task2
   )
 where
 
-import           Data.List.NonEmpty             ( NonEmpty(..)
-                                                , fromList
-                                                )
+import Data.List.NonEmpty (NonEmpty (..), fromList)
 
 splitOn :: (Eq a) => a -> [a] -> NonEmpty [a]
 splitOn on toSplit = fromList . reverse $ reverse lastElement : currentList where

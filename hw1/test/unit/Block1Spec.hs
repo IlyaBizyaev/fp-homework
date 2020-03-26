@@ -1,10 +1,10 @@
 module Block1Spec where
 
-import           Test.Hspec
-import           Control.Exception              ( evaluate )
-import           Block1.Task1
-import           Block1.Task2
-import           Block1.Task3
+import Block1.Task1
+import Block1.Task2
+import Block1.Task3
+import Control.Exception (evaluate)
+import Test.Hspec
 
 spec :: Spec
 spec = do

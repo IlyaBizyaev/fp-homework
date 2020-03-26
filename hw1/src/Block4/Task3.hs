@@ -11,9 +11,9 @@ instance Semigroup (NonEmpty a) where
   (x :| x') <> (y :| y') = x :| (x' ++ y : y')
 
 concat' :: [NonEmpty a] -> NonEmpty a
-concat' [] = undefined
-concat' (x:[]) = x
-concat' (x:xs) = x <> (concat' xs)
+concat' []       = undefined
+concat' (x : []) = x
+concat' (x : xs) = x <> (concat' xs)
 
 instance Functor NonEmpty where
   fmap f (x :| y) = (f x) :| fmap f y
@@ -21,8 +21,8 @@ instance Functor NonEmpty where
 instance Applicative NonEmpty where
   pure x = x :| []
 
-  (fh :| fs) <*> (xh :| xs) = (head applied) :| (tail applied) where
-    applied = [f x | f <- fh:fs, x <- xh:xs]
+  (fh :| fs) <*> (xh :| xs) = (head applied) :| (tail applied)
+    where applied = [ f x | f <- fh : fs, x <- xh : xs ]
 
 
 instance Monad NonEmpty where

@@ -48,8 +48,8 @@ nextDay = afterDays 1
 
 isWeekend :: DayOfWeek -> Bool
 isWeekend Saturday = True
-isWeekend Sunday = True
-isWeekend _ = False
+isWeekend Sunday   = True
+isWeekend _        = False
 
 daysToParty :: DayOfWeek -> Int
 daysToParty day = (dayToInt Friday - dayToInt day + 7) `mod` 7

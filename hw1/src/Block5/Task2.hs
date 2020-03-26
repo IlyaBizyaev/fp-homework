@@ -3,7 +3,7 @@ module Block5.Task2
   )
 where
 
-import           Control.Monad.State
+import Control.Monad.State
 
 
 moving :: Int -> [Double] -> [Double]

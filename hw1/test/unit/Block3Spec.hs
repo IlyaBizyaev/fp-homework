@@ -1,8 +1,8 @@
 module Block3Spec where
 
-import           Test.Hspec
-import           Block3.Task1
-import           Block3.Task2
+import Block3.Task1
+import Block3.Task2
+import Test.Hspec
 
 data Sum a = Sum { getSum :: a } deriving Eq
 

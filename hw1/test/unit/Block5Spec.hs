@@ -1,17 +1,17 @@
 module Block5Spec where
 
-import           Test.Hspec
-import           Block5.Task1
+import Block5.Task1
+import Test.Hspec
 
 
 spec :: Spec
 spec = do
   describe "Block5.Task1" $ do
     -- pow, powtoneg
-    let const1 = Const 5
-    let const2 = Const 42
+    let const1    = Const 5
+    let const2    = Const 42
     let zeroConst = Const 0
-    let negConst = Const (-10)
+    let negConst  = Const (-10)
     it "Const expr evaluates" $ do
       eval const1 `shouldBe` Right 5
       eval const2 `shouldBe` Right 42
