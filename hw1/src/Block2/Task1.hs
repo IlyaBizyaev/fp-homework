@@ -5,7 +5,7 @@ module Block2.Task1
   )
 where
 
-import           Block1.Task3                   ( SearchTree(..) )
+import Block1.Task3 (SearchTree (..))
 
 newtype SearchTreeFoldable a = SearchTreeFoldable (SearchTree a)
 

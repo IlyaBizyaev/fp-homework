@@ -14,7 +14,7 @@ instance Semigroup (NonEmpty a) where
 -- | 'concat' function implemented for NonEmpty.
 concat' :: [NonEmpty a] -> NonEmpty a
 concat' []       = undefined
-concat' [x] = x
+concat' [x     ] = x
 concat' (x : xs) = x <> (concat' xs)
 
 instance Functor NonEmpty where
