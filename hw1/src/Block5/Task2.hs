@@ -5,7 +5,7 @@ where
 
 import Control.Monad.State
 
-
+-- | An implementation of Simple Moving Average algorithm, based on State monad.
 moving :: Int -> [Double] -> [Double]
 moving n l | n <= 0    = error "Expected a positive window size"
            | otherwise = reverse $ evalState (movingMonad n l) ([], []) where

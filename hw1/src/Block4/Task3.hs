@@ -5,14 +5,16 @@ where
 
 import Control.Applicative
 
+-- | Non-empty list of arbitrary type.
 data NonEmpty a = a :| [a]
 
 instance Semigroup (NonEmpty a) where
   (x :| x') <> (y :| y') = x :| (x' ++ y : y')
 
+-- | 'concat' function implemented for NonEmpty.
 concat' :: [NonEmpty a] -> NonEmpty a
 concat' []       = undefined
-concat' (x : []) = x
+concat' [x] = x
 concat' (x : xs) = x <> (concat' xs)
 
 instance Functor NonEmpty where
@@ -23,7 +25,6 @@ instance Applicative NonEmpty where
 
   (fh :| fs) <*> (xh :| xs) = (head applied) :| (tail applied)
     where applied = [ f x | f <- fh : fs, x <- xh : xs ]
-
 
 instance Monad NonEmpty where
   (x :| xs) >>= f = (f x) <> (concat' (map f xs))

@@ -1,13 +1,15 @@
 {-# LANGUAGE InstanceSigs #-}
 
 module Block2.Task1
-  ()
+  ( SearchTreeFoldable
+  )
 where
 
-import Block1.Task3 (SearchTree (..))
+import           Block1.Task3                   ( SearchTree(..) )
 
 newtype SearchTreeFoldable a = SearchTreeFoldable (SearchTree a)
 
+-- | Convert SearchTree's internal list representation to a classic list.
 replicate' :: Integer -> a -> [a]
 replicate' 0 _ = []
 replicate' x y = y : replicate' (x - 1) y

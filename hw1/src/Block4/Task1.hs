@@ -3,6 +3,8 @@ module Block4.Task1
   )
 where
 
+-- | If the string is a space-separated list of integers, sums them.
+-- Otherwise considers the string malformed and returns Nothing.
 stringSum :: String -> Maybe Int
 stringSum s = sumMapped mapped where
   mapped    = mapM maybeWrapRead maybeNums
