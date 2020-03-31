@@ -31,7 +31,3 @@ listlistParser = const <$> list <*> eof where
 
   commaAndSublistP = flip const <$> commaP <*> sublistP
   list             = ((:) <$> sublistP <*> many commaAndSublistP) <|> pure []
-
-
-
-
