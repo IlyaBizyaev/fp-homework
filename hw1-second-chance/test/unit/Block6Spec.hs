@@ -27,11 +27,11 @@ spec = do
       runParser (pa <*> pb) "any" `shouldBe` runParser (liftA2 id pa pb) "any"
       runParser pb "meaning" `shouldBe` Just (42, "meaning")
       runParser (pa <*> pb) "cat" `shouldBe` Just ('z', "cat")
+      let replaceRes = pure 'h' <* element 't'
+      runParser replaceRes "top" `shouldBe` Just ('h', "op")
     it "Monad instance works as expected" $ do
       let digitP = (\c -> fromEnum c - fromEnum '0') <$> satisfy isDigit
       runParser (digitP >>= ntimes digitP) "1234" `shouldBe` Just ([2], "34")
-      let replaceRes = pure 'h' <* element 't'
-      runParser replaceRes "top" `shouldBe` Just ('h', "op")
     it "Alternative instance works as expected" $ do
       let p = element 'c' <|> element 'h'
       runParser p "cat" `shouldBe` Just ('c', "at")
