@@ -1,0 +1,6 @@
+cradle:
+  stack:
+    - path: ./test/unit
+      component: "hw1-second-chance:test:hw1-2nd-unit-tests"
+    - path: ./src
+      component: "hw1-second-chance:lib"
