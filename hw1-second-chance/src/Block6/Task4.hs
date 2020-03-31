@@ -21,7 +21,7 @@ listlistParser = const <$> list <*> eof where
   nonNegIntP = (\_ x _ -> x) <$> whitespaceP <*> digitsP <*> whitespaceP
   intP       = (\_ x _ -> x) <$> whitespaceP <*> integerParser <*> whitespaceP
 
-  ntimes :: (Alternative f) => f a -> Int -> f [a]
+  ntimes :: Alternative f => f a -> Int -> f [a]
   ntimes _ 0 = pure []
   ntimes p n = (:) <$> p <*> ntimes p (n - 1)
 

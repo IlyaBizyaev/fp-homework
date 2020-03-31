@@ -1,8 +1,8 @@
 module Block6.Task2
-  ( ok
+  ( element
   , eof
+  , ok
   , satisfy
-  , element
   , stream
   )
 where

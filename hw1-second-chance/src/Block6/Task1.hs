@@ -7,14 +7,12 @@ where
 
 import Control.Applicative (Alternative (..))
 
-first :: (a -> b) -> (a, c) -> (b, c)
-first f (a, c) = (f a, c)
-
 -- | Parser combinator type.
 newtype Parser s a = Parser { runParser :: [s] -> Maybe (a, [s]) }
 
 instance Functor (Parser s) where
   fmap g (Parser f) = Parser $ fmap (first g) . f
+    where first func (a, c) = (func a, c)
 
 instance Applicative (Parser s) where
   pure :: a -> Parser s a

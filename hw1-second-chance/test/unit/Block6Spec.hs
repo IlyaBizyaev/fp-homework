@@ -30,6 +30,8 @@ spec = do
     it "Monad instance works as expected" $ do
       let digitP = (\c -> fromEnum c - fromEnum '0') <$> satisfy isDigit
       runParser (digitP >>= ntimes digitP) "1234" `shouldBe` Just ([2], "34")
+      let replaceRes = pure 'h' <* element 't'
+      runParser replaceRes "top" `shouldBe` Just ('h', "op")
     it "Alternative instance works as expected" $ do
       let p = element 'c' <|> element 'h'
       runParser p "cat" `shouldBe` Just ('c', "at")
