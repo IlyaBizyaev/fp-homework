@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: ./src
+      component: "fs-lenses:lib"
+    - path: ./test
+      component: "fs-lenses:test:fs-lenses-tests"
+    - path: ./app
+      component: "fs-lenses:exe:fs-lenses-runner"

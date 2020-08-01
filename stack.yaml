@@ -3,6 +3,12 @@ resolver: lts-14.27
 packages:
 - hw0
 - hw1
+- hw3/comonad19
+- hw3/fs-lenses
+- hw3/geometry
+- hw3/halyavascript
+- hw3/hashtable
+
 - practice1
 
 extra-deps: []

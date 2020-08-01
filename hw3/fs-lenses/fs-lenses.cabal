@@ -1,0 +1,54 @@
+cabal-version:       2.2
+
+name:                fs-lenses
+version:             0.1.0.0
+synopsis:            Tasks 5-7
+description:         Filesystem structure lenses
+
+homepage:            https://github.com/fp-ctd-itmo/hw3-IlyaBizyaev
+license:             MIT
+license-file:        LICENSE
+author:              Ilya Bizyaev
+maintainer:          me@ilyabiz.com
+copyright:           2020 Ilya Bizyaev
+
+category:            Lenses
+build-type:          Simple
+tested-with:         GHC == 8.6.5
+
+common shared-properties
+  build-depends: base >=4.12 && < 5
+               , directory
+               , filepath
+               , microlens
+  ghc-options: -Wall -Werror -O2
+
+library
+  import: shared-properties
+  hs-source-dirs:  src
+  exposed-modules: FS
+                 , Practice
+                 , Traversal
+                 , Modification
+  default-language:    Haskell2010
+
+test-suite fs-lenses-tests
+  import:              shared-properties
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  other-modules:       PracticeSpec
+                     , TraversalSpec
+                     , ModificationSpec
+                     , TestData
+  build-depends:       fs-lenses
+                     , hspec
+                     , hspec-discover
+  default-language:    Haskell2010
+
+executable fs-lenses-runner
+  import:              shared-properties
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  build-depends:       fs-lenses
+  default-language:    Haskell2010

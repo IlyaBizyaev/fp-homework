@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: ./src
+      component: "hashtable:lib"
+    - path: ./test
+      component: "hashtable:test:hashtable-tests"
+    - path: ./bench
+      component: "hashtable:bench:hashtable-bench"

@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: ./src
+      component: "halyavascript:lib"
+    - path: ./test
+      component: "halyavascript:test:halyavascript-tests"
+    - path: ./app
+      component: "halyavascript:exe:halyavascript-runner"

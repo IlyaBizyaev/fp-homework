@@ -1,0 +1,41 @@
+cabal-version:       2.2
+
+name:                geometry
+version:             0.1.0.0
+synopsis:            Task 1
+description:         Geometry datatypes and performant functions
+
+homepage:            https://github.com/fp-ctd-itmo/hw3-IlyaBizyaev
+license:             MIT
+license-file:        LICENSE
+author:              Ilya Bizyaev
+maintainer:          me@ilyabiz.com
+copyright:           2020 Ilya Bizyaev
+
+category:            Geometry
+build-type:          Simple
+tested-with:         GHC == 8.6.5
+
+common shared-properties
+  build-depends: base >=4.12 && < 5
+               , parallel
+               , criterion
+               , deepseq
+  ghc-options: -Wall -Werror -O2
+
+library
+  import: shared-properties
+  hs-source-dirs:  src
+  exposed-modules: Geometry
+                 , FunctionsNaive
+                 , FunctionsParallel
+  default-language:    Haskell2010
+
+benchmark geometry-bench
+  import:              shared-properties
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      bench
+  main-is:             Main.hs
+  build-depends:       geometry
+  ghc-options:         -rtsopts -threaded -eventlog "-with-rtsopts=-N4"
+  default-language:    Haskell2010
