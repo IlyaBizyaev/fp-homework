@@ -1,3 +1,5 @@
-# hw0
+# Homework 0
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com//fp-homework/blob/master/hw0/LICENSE)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/IlyaBizyaev/fp-homework/blob/master/LICENSE)
+
+Task statements: https://github.com/jagajaga/itmo-fp-2020/blob/master/hw0.md

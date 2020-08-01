@@ -1,3 +1,3 @@
-# hw1
+# Practice 1
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com//fp-homework/blob/master/hw1/LICENSE)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/IlyaBizyaev/fp-homework/blob/master/LICENSE)
