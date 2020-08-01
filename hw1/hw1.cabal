@@ -23,6 +23,7 @@ library
                      , Block3.Task1, Block3.Task2
                      , Block4.Task1, Block4.Task2, Block4.Task3
                      , Block5.Task1, Block5.Task2
+                     , Block6.Task1, Block6.Task2, Block6.Task3, Block6.Task4
   ghc-options:         -Wall
   build-depends:       base >= 4.9 && < 5
                      , mtl
@@ -37,6 +38,7 @@ test-suite hw1-unit-tests
                      , Block3Spec
                      , Block4Spec
                      , Block5Spec
+                     , Block6Spec
   build-depends:       base
                      , hw1
                      , hspec
