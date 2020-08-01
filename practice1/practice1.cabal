@@ -1,16 +1,15 @@
 name:                practice1
 version:             0.1.0.0
-synopsis:            Template for task 1
-description:         Practice 1 for FP ITMO course
+synopsis:            Practice 1 for FP ITMO course
 
-homepage:            https://github.com//fp-homework/tree/master/practice1#readme
+homepage:            https://github.com/IlyaBizyaev/fp-homework
 license:             MIT
 license-file:        LICENSE
-author:              Author name here
+author:              Ilya Bizyaev
 maintainer:          example@example.com
-copyright:           2019 Author name here
+copyright:           2020 Ilya Bizyaev
 
-category:            Web
+category:            Sorting
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
@@ -18,7 +17,7 @@ tested-with:         GHC == 8.0.1
 
 executable practice1
   hs-source-dirs:      app
-  main-is:     Main.hs
+  main-is:             Main.hs
   ghc-options:         -Wall
   build-depends:       base >= 4.9 && < 5
   default-language:    Haskell2010

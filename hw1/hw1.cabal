@@ -1,16 +1,15 @@
 name:                hw1
 version:             0.1.0.0
-synopsis:            Synopsis for task 1
-description:         Task 1 for FP ITMO course
+synopsis:            Task 1 for FP ITMO course
 
-homepage:            https://github.com//fp-homework/tree/master/hw1#readme
+homepage:            https://github.com/IlyaBizyaev/fp-homework
 license:             MIT
 license-file:        LICENSE
 author:              Ilya Bizyaev
 maintainer:          example@example.com
 copyright:           2020 Ilya Bizyaev
 
-category:            Web
+category:            Language
 build-type:          Simple
 extra-source-files:  README.md
 cabal-version:       >=1.10
