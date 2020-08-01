@@ -30,7 +30,6 @@ jobs:
       run: |
         set -ex
         stack --no-terminal --install-ghc $ARGS test --bench --only-dependencies
-        esac
         set +ex
       env:
         ARGS: ${{ matrix.plan.resolver }}
@@ -40,7 +39,6 @@ jobs:
       run: |
         set -ex
         stack --no-terminal $ARGS test --bench --no-run-benchmarks --haddock --no-haddock-deps
-        esac
         set +ex
       env:
         ARGS: ${{ matrix.plan.resolver }}
